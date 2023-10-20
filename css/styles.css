@@ -1,0 +1,134 @@
+/* Variáveis padronizadas. */
+
+:root {
+    --main-brown: burlywood;
+    --main-red: darkred;
+    --main-white: white;
+}
+
+/* Reset da base */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Box-sizing e tamanho da fonte */
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Young Serif", sans-serif;
+}
+
+/* Estabelecendo os break points para mudança de tela. */
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* 760px / 16px = 47.5em */
+@media (max-width: 47.5em) {
+    html {
+        font-size: 52.5%;
+    }
+}
+
+/* 540px / 16px = 33.75em*/
+
+/* 420px / 16px =  26.25em*/
+@media (max-width: 28.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* Barra de navegação */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    background: var(--main-brown);
+    box-shadow: 0 2px 0 var(--main-red);
+    z-index: 10;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 6.5em;
+    padding: 0.5em;
+}
+
+.nav-bar a {
+    padding: 1.5em;
+    font-size: 2em; 
+    font-weight: 550;
+}
+
+.nav-bar a:hover {
+    background: var(--main-white);
+}
+
+.nav-bar a:hover, .nav-bar a:visited, .nav-bar a:link {
+    color: var(--main-red);
+}
+
+.nav-bar a:last-of-type {
+    margin-right: 1.5em;
+}
+
+@media (max-width: 75em) {
+    .nav-bar a {
+        padding: 1.5em 1em;
+    }
+}
+
+@media (max-width: 47.5em) {
+    .nav-bar a {
+        padding: 1.2em 1em;
+    }
+
+    .nav-bar a:last-of-type {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 33.75em) {
+    .nav-bar a {
+        padding: 1.2em 0.5em;
+    }
+}
+
+@media (max-width: 28.5em){
+    .nav-bar a {
+        font-size: 1.6em;
+    }
+
+    .nav-bar a:hover {
+        background: unset;
+    }
+}
