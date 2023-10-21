@@ -29,6 +29,11 @@ body {
     font-family: "Young Serif", sans-serif;
 }
 
+main {
+    margin-top: 70px; /* Adiciona uma margem no topo para evitar a sobreposição */
+    padding: 20px; /* Espaçamento interno no conteúdo principal */
+}
+
 /* Estabelecendo os break points para mudança de tela. */
 
 /* 1200px / 16px = 75em */

@@ -18,8 +18,37 @@
                 <a class="nav-link" href="#media">Jaguara em Ação</a>
                 <a class="nav-link" href="produtos.html">Produtos</a>
                 <a class="nav-link" href="form.html">Inscrever-se</a>
+                <a class="nav-link" href="about.html">Sobre nós</a>
             </div>
         </nav>
     </header>
+    <main>
+        <section>
+            <form class="form">
+                <label for="">Nome Completo</label>
+                <input required id="nomecompleto" type="text">
+            </form>
+            <form class="form">
+                <label for="email">E-mail</label>
+                <input required id="email" type="email">
+            </form>
+            <form class="form">
+                <label for="">Telefone</label>
+                <input required min=11 max=11 type="tel" name="Telefone" id="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}">
+            </form>
+            <input type="button" value="enviar">
+        </section>
+    </main>
 </body>
+<!--Script para o input aceitar apenas digitos numericos-->
+<script>
+  const input = document.getElementById("telefone");
+
+  input.addEventListener("input", function (event) {
+    const inputValue = event.target.value;
+    const numericValue = inputValue.replace(/\D/g, "");
+    event.target.value = numericValue;
+  });
+</script>
+
 </html>
