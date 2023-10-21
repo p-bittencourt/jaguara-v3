@@ -101,6 +101,12 @@ nav {
     margin-right: 1.5em;
 }
 
+#imagem-rifa {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+}
+
 @media (max-width: 75em) {
     .nav-bar a {
         padding: 1.5em 1em;
