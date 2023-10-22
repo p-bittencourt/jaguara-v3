@@ -143,3 +143,108 @@ nav {
         background: unset;
     }
 }
+
+/* ESTILOS DO FORMULÁRIO*/
+
+.contact-form {
+    text-align: left;
+}
+
+.form-submit {
+    display: inline-block;
+    background: rgb(81, 92, 104);
+    color: #fff;
+    border-bottom: none;
+    width: auto;
+    padding: 15px 39px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-left: 15px;
+    cursor: pointer
+}
+.form-submit:hover {
+    background: rgb(129, 145, 161);
+}
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+    display: inline-flex;
+    margin-left: 25px;
+}
+.form-group:last-child {
+    margin-bottom: 0
+}
+label {
+    color: lightslategrey;
+}
+input {
+    outline: none;
+    width: 100%;
+    display: block;
+    color: rgb(47, 55, 63);
+    font-size: 17px;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 6px 30px;
+    box-sizing: border-box
+}
+::placeholder {
+    color: rgb(166, 179, 196);
+    font-size: medium;
+}
+.label-agree-term {
+    position: relative;
+    top: 0%;
+}
+.agree-term {
+    display: inline-block;
+    width: auto
+}
+.term-service {
+    font-size: 13px;
+    color: #222
+}
+input[type=checkbox]+label {
+    display: inline-block;
+    line-height: 1.5em;
+    margin-top: 6px;
+}
+p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: rgb(97, 112, 128);
+    text-align: center;
+}
+
+/*ESTILO DA TABELA DE LEITURA DO FORMS */
+
+table.tableCSS {
+    background-color: #c6a152a8;
+    text-align: left;
+    padding: 10px;
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+table.tableCSS td {
+    border: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+}
+table.tableCSS th {
+    background-color: #eaedf1;
+    border-radius: 10px;
+    height: 30px;
+    color: rgb(97, 112, 128);
+    text-align: center;
+}
