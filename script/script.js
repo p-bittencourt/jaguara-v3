@@ -5,22 +5,23 @@ function getParameters() {
     var url = window.location.href;     // Obtém a URL
     var paramsStart = url.indexOf("?"); // Procura ? na URL
   
-    if (paramsStart != -1) {
+    if (paramsStart == -1) return null;
       // Encontrou ? na URL
-      var paramString = url.substring(paramsStart + 1); // Retorna parte da URL após ?
-      paramString = decodeURIComponent(paramString);    // Decodifica código de URI da URL
-      var params = paramString.split("&"); // Retorna trechos da String separados por &
-      for (var i = 0; i < params.length; i++) {
-        var pairArray = params[i].split("="); // Retorna trechos da String separados por =
-        if (pairArray.length == 2) {
-          paramsRet[pairArray[0]] = pairArray[1];
-        }
-  
+    var paramString = url.substring(paramsStart + 1); // Retorna parte da URL após ?
+    paramString = decodeURIComponent(paramString);    // Decodifica código de URI da URL
+    var params = paramString.split("&"); // Retorna trechos da String separados por &
+    for (var i = 0; i < params.length; i++) {
+      var pairArray = params[i].split("="); // Retorna trechos da String separados por =
+      if (pairArray.length == 2) {
+        paramsRet[pairArray[0]] = pairArray[1];
       }
-      return paramsRet;
     }
-    return null; // Não encontrou ? na URL
+    return paramsRet;// Não encontrou ? na URL
   }
+
+document.addEventListener("DOMContentLoaded", function() {
+  abrirDialog();
+});
 
   function mascaraTelefone(event) {
     let tecla = event.key;
@@ -56,6 +57,27 @@ function getParameters() {
       return false;
     }
   }
+
+function redirecionarParaProdutos() {
+  var URL = "produtos.html?aceito=true";
+  window.location.href = URL;
+}
+
+function abrirDialog(){
+  var params = getParameters();
+  if (Object.keys(params).length != 0) { mostrarDialog();}
+}
+
+function mostrarDialog(){
+  var dialog = document.getElementById("promo");
+  dialog.showModal();
+}
+
+function fecharDialog() {
+  var dialog = document.getElementById("promo");
+  dialog.close();
+}
+
 
 
   

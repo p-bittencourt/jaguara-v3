@@ -34,6 +34,44 @@ main {
     padding: 20px; /* Espaçamento interno no conteúdo principal */
 }
 
+dialog::backdrop {
+    background-color: black (0 0 0 / .3);
+}
+
+.pop-up {
+    text-align: justify;
+    width: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em (0 0 0 / .3);
+}
+
+.pop-up button {
+    border: none;
+    display: inline-block;
+    background: rgb(81, 92, 104);
+    color: #fff;
+    border-bottom: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-left: 15px;
+    cursor: pointer
+}
+
+
+
+
 /* Estabelecendo os break points para mudança de tela. */
 
 /* 1200px / 16px = 75em */

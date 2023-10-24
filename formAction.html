@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,10 @@
     <link href='https://fonts.googleapis.com/css?family=Young Serif' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/d41ff52c14.js" crossorigin="anonymous"></script>
+    <script src="script/script.js"></script>
     <title>Formulário Preenchido</title>
 </head>
 <body>
-
     <header>
         <nav class="nav-bar">
             <img src="imagens/escudo.jpg" class="logo" alt="logo-jaguara">
@@ -20,22 +20,15 @@
                 <a class="nav-link" href="index.html">Página Inicial</a>
                 <a class="nav-link" href="#media">Jaguara em Ação</a>
                 <a class="nav-link" href="produtos.html">Produtos</a>
-                <a class="nav-link" href="form.html">Inscrever-se</a>
+                <a class="nav-link" href="form.html">Registrar-se</a>
                 <a class="nav-link" href="about.html">Sobre nós</a>
             </div>
         </nav>
     </header>
-
-    
     <main>
-
-        <script src="script/script.js"></script>
         <div class="content">
-
             <h2 class="titleTop">Dados de Contato</h2>
-
             <p>Lendo dados usando o javascript e enviando via <b>GET</b> a partir de um Form HTML</p>
-
             <table class="tableCSS">
                 <tr><th>Campos</th><th>Dados informados</th></tr>
                 <script language=javascript>
@@ -47,10 +40,16 @@
                 </script>
             </table>
                 <input type=button class="form-submit" 
-                    value=" << Retornar" onclick="history.back()">
+                value=" << Retornar" onclick="history.back()">
         </div>
-    
+        <section>
+            <dialog id="promo" class="pop-up">
+                <h2>Parabéns!</h2>
+                <p>Você ganhou um desconto de 10% em qualquer produto por ter se registrado em nosso site!</p>
+                <button id="popUpButtonAceitar" onclick="redirecionarParaProdutos()" type="button">Aproveitar</a></button>
+                <button id="popUpButtonIgnorar" onclick="fecharDialog()" type="button">Ignorar</button>
+            </dialog>
+        </section>
     </main>                
-    
 </body>
 </html>
