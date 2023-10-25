@@ -69,7 +69,33 @@ dialog::backdrop {
     cursor: pointer
 }
 
+.conteiner {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
 
+
+.product {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    width: 40%;
+    height: auto;
+    border-style: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em (0 0 0 / .3);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+div::backdrop {
+    background-color: black (0 0 0 / .3);
+}
 
 
 /* Estabelecendo os break points para mudança de tela. */
