@@ -191,6 +191,7 @@ footer {
     bottom: 0;
     left: 0;
     align-items: center;
+    border-top: 2px solid var(--main-red);
 }
 
 #inc {
@@ -200,7 +201,7 @@ footer {
 }
 
 #adesivo {
-    height: 4vh;
+    height: 3.5vh;
     padding-left: 5px;
 }
 
@@ -214,9 +215,9 @@ main {
 /* Estilo main-page */
 
 .front-page {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 40% 10% 20% 20%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 main h1 {
