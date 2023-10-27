@@ -19,10 +19,6 @@ function getParameters() {
     return paramsRet;// Não encontrou ? na URL
   }
 
-document.addEventListener("DOMContentLoaded", function() {
-  abrirDialog();
-});
-
   function mascaraTelefone(event) {
     let tecla = event.key;
     // Regex: 
@@ -58,19 +54,30 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-function redirecionarParaProdutos() {
-  var URL = "produtos.html?aceito=true";
-  window.location.href = URL;
-}
+/* FUNÇÕES REFERENTES AO POP-UP  */
+document.addEventListener("DOMContentLoaded", function()
+{
+  abrirDialog();
+  if (window.location.href.endsWith('/produtos.html?aceito=true') || (window.location.href.endsWith('/produtos.html')) || (window.location.href.endsWith('?aceito=true')))
+  {
+    concedeDesconto();
+  }
+})
 
 function abrirDialog(){
   var params = getParameters();
-  if (Object.keys(params).length != 0) { mostrarDialog();}
+  if (Object.keys(params).length != 0) { mostrarDialog()};
 }
 
 function mostrarDialog(){
   var dialog = document.getElementById("promo");
-  dialog.showModal();
+  if (dialog != null){dialog.showModal()}
+}
+
+function redirecionarParaProdutos() {
+  var URL = "produtos.html?aceito=true";
+  window.location.href = URL;
+  concedeDesconto();
 }
 
 function fecharDialog() {
@@ -78,6 +85,21 @@ function fecharDialog() {
   dialog.close();
 }
 
+/* VERIFICA SE O USUARIO ACEITOU O DESCONTO DO POP-UP  */
+function verificaAceite() {
+    var url = window.location.href;
+    return (url.indexOf("?")?true:false);
+  }
 
+function concedeDesconto() {
+    if (verificaAceite()) {
+        var valorElement = document.getElementById("valor");
+        var valorTexto = valorElement.textContent;
+        
+        var valorNumerico = parseFloat(valorTexto.replace("R$ ", "").replace(",", "."));
+        console.log(valorNumerico)
+        var novoValor = valorNumerico - (0.1 * valorNumerico);
 
-  
+        valorElement.textContent = "R$ " + novoValor.toFixed(2); // Arredonda para 2 casas decimais
+    }
+}
