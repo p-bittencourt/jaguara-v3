@@ -222,9 +222,8 @@ main {
 
 .front-page {
     height: 100vh;
-    justify-items: center;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 40% 10% 20% 20%;
 }
 
 main h1 {
@@ -263,6 +262,10 @@ main h3 {
 }
 
 @media (max-width: 61.25em) {
+    main {
+        grid-template-rows: 50% 10% 15% 15%;
+    }
+
     main h1 {
         font-size: 8em;
     }
@@ -283,8 +286,12 @@ main h3 {
 }
 
 @media (max-width: 26.5em) {
+
+    main {
+        grid-template-rows: 60% 10% 10% 10%;
+    }
+
     main h1 {
-        font-size: 6em;
         margin: 0;
         margin-bottom: 0.8em;
     }
