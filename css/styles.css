@@ -95,7 +95,7 @@ dialog::backdrop {
 /* 540px / 16px = 33.75em*/
 
 /* 420px / 16px =  26.25em*/
-@media (max-width: 28.25em) {
+@media (max-width: 26.25em) {
     html {
         font-size: 50%;
     }
@@ -169,13 +169,129 @@ nav {
     }
 }
 
-@media (max-width: 28.5em){
+@media (max-width: 26.5em){
     .nav-bar a {
         font-size: 1.6em;
     }
 
     .nav-bar a:hover {
         background: unset;
+    }
+}
+
+/* Estilo do Rodapé */
+
+footer {
+    background-color: var(--main-brown);
+    position: fixed;
+    height: 4%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+}
+
+#inc {
+    color: var(--main-red);
+    opacity: .6;
+    padding-right: 5px;
+}
+
+#adesivo {
+    height: 4vh;
+    padding-left: 5px;
+}
+
+@media (max-width: 33.75em) {
+    footer {
+        position: relative;
+    }   
+}
+
+
+/* Estilo Main - Página Index*/
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo main-page */
+
+.front-page {
+    height: 100vh;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    color: var(--main-red);
+    font-size: 10em;
+    text-align: center;
+    margin: 0.8em;
+    font-weight: 500;
+}
+
+main h3 {
+    color: var(--main-red);
+    font-size: 4em;
+    text-align: center;
+    font-weight: 300;
+    margin: 0.5em;
+}
+
+.newsletter {
+    width: 80%;
+    margin: 8em auto;
+}
+
+#type_email {
+    padding: 1em;
+    margin: 1em auto;
+    background-color: rgba(153, 153, 153, 0.2);
+}
+
+#submit_button {
+    background-color: var(--main-red);
+    opacity: .8;
+    padding: 1em;
+    margin: 2em auto;
+    color: var(--main-white);
+}
+
+@media (max-width: 61.25em) {
+    main h1 {
+        font-size: 8em;
+    }
+
+    main h3 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 33.75em) {
+    main h1 {
+        font-size: 7em;
+    }
+
+    main h3 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 26.5em) {
+    main h1 {
+        font-size: 6em;
+        margin: 0;
+        margin-bottom: 0.8em;
+    }
+
+    main h3 {
+        font-size: 1.8em;
+        margin: 0;
     }
 }
 
