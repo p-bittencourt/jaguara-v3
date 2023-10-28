@@ -539,3 +539,58 @@ table.tableCSS th {
         margin-bottom: 30px;
     }
 }
+
+
+/*ESTILO DOS MODAIS */
+
+
+.modal {
+    position: absolute;
+    display: none;
+    left: 30%;
+    top: 30%;
+    max-width: 200px;
+    background-color: rgb(252, 244, 220);
+    border-radius: 10px;
+    padding: 5px 5px;
+    box-shadow: 0 25px 25px rgb(0 0 0 / 30%);
+}
+
+.modal .info {
+    color: crimson;
+    font-size: medium;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.modal .infoH {
+    color: rgb(189, 103, 69);
+    font-size: medium;
+    text-transform: uppercase;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.conteiner .item .modalButton {
+    outline: none;
+    background-color: rgb(172, 141, 99);
+    color: white;
+    width: 100%;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 7px;
+    box-shadow: 0 25px 25px rgb(0 0 0 / 30%);
+    cursor: pointer
+}
+
+.topright {
+    position: absolute;
+    right: 5px;
+    border-radius: 4px;
+    padding: 2px;
+    top: 0;
+    background-color: crimson;
+    color: #fff;
+    cursor: pointer
+}

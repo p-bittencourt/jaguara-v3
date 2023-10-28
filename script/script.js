@@ -54,6 +54,45 @@ function getParameters() {
     }
   }
 
+//FUNÇÕES REFERENTE AOS POP-UPs DE PRODUTOS
+function openModal(produto) {
+  var txt1 = document.getElementById("detalhesProd1");
+  var txt2 = document.getElementById("detalhesProd2");
+  var txt3 = document.getElementById("detalhesProd3");
+  var estilo;
+  switch (produto) {
+    case "produto01":
+      txt1.innerHTML  = "Camiseta compeão do coração";
+      txt2.innerHTML  = "Poliester Poliester";
+      txt3.innerHTML  = "R$81,00";
+      estilo = "28%"
+      break;
+    case "produto02":
+      txt1.innerHTML  = "JAQUETA";
+      txt2.innerHTML  = "COURO FODÃO ";
+      txt3.innerHTML  = "R$82,00";
+      estilo = "48%"
+      break;
+    case "produto03":
+      txt1.innerHTML  = "CANECA";
+      txt2.innerHTML  = "Plástico atóxico";
+      txt3.innerHTML  = "R$83,00";
+      estilo = "68%"
+      break;
+         /* .. continuar igual para as 6 imagens */
+  default:
+      txt1.innerHTML  = "Escolha novamente";    
+      txt2.innerHTML  = "Produto não selecionado";      
+      //txt3.innerHTML  = "R$85,00";
+  }
+  document.getElementById("knowMore").style.left = estilo;
+  document.getElementById("knowMore").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("knowMore").style.display = 'none';
+}
+
 /* FUNÇÕES REFERENTES AO POP-UP  */
 document.addEventListener("DOMContentLoaded", function()
 {
@@ -85,6 +124,7 @@ function fecharDialog() {
   dialog.close();
 }
 
+
 /* VERIFICA SE O USUARIO ACEITOU O DESCONTO DO POP-UP  */
 function verificaAceite() {
     var url = window.location.href;
@@ -103,3 +143,5 @@ function concedeDesconto() {
         valorElement.textContent = "R$ " + novoValor.toFixed(2); // Arredonda para 2 casas decimais
     }
 }
+
+

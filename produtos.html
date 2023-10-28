@@ -31,6 +31,7 @@
                         <div class="product"><a href="produtos.html"><img src="imagens/camisa-slipknot-modelo.png" alt="modelo de camisa"></a></div>
                         <div class="sell">PROMOÇÃO</div>
                         <h3>Camisa Slipknot</h3>
+                        <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('produto01');">  
                         <span id="valor">R$ 49,90</span>
                         <br>
                         <button type="button">Comprar</button>
@@ -38,6 +39,7 @@
                     <div class="item">
                         <div class="product"><a href="produtos.html"><img src="imagens/camisa-slipknot-modelo.png" alt="modelo de camisa"></a></div>
                         <h3>Camisa Slipknot</h3>
+                        <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('produto02');">
                         <span>R$ 49,90</span>
                         <br>
                         <button type="button">Comprar</button>
@@ -45,6 +47,7 @@
                     <div class="item">
                         <div class="product"><a href="produtos.html"><img src="imagens/camisa-slipknot-modelo.png" alt="modelo de camisa"></a></div>
                         <h3>Camisa Slipknot</h3>
+                        <input class="modalButton" type="button" value="Saiba mais..." onclick="openModal('produto03');">
                         <span>R$ 49,90</span>
                         <br>
                         <button type="button">Comprar</button>
@@ -52,6 +55,22 @@
                 </div>
             </div>
         </div>
+    
+        <!-- Modal Detalhes -->
+        <div id="knowMore" class="modal">
+            <header>
+                <span onclick="closeModal();" class="topright">X</span>
+            </header>
+            <div>
+                <p id="detalhesProd1" class="infoH"></p> 
+                <p id="detalhesProd2" class="info"></p>
+                <p id="detalhesProd3" class="info"></p>
+            </div>
+        </div>
+    
+    
     </main>
+
+    
 </body>
 </html>
