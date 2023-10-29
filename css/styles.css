@@ -518,6 +518,11 @@ table.tableCSS th {
     font-size: 15px;
 }
 
+#imagem-produto {
+    width: 310px;
+    height: 310px;
+}
+
 .sell {
     border-radius: 4px;
     background-color: var(--main-red);
