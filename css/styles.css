@@ -424,6 +424,23 @@ iframe {
 
 /* ESTILOS DO FORMULÁRIO*/
 
+.form-page {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15em;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario h3 {
+    margin-bottom: 2em;
+}
+
 .contact-form {
     text-align: left;
 }
@@ -504,7 +521,7 @@ p {
 /*ESTILO DA TABELA DE LEITURA DO FORMS */
 
 table.tableCSS {
-    background-color: #c6a152a8;
+    background-color: var(--main-brown);
     text-align: left;
     padding: 10px;
     width: 650px;
@@ -525,6 +542,12 @@ table.tableCSS th {
     height: 30px;
     color: rgb(97, 112, 128);
     text-align: center;
+}
+
+.titleTop {
+    color: var(--main-red);
+    text-align: center;
+    font-size: 3em;
 }
 
 /*ESTILO DOS PRODUTOS */
