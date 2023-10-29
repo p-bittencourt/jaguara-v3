@@ -351,7 +351,6 @@ iframe {
 /* Estilo página Sobre nós */
 
 .about-us {
-    min-height: 100vh;
     display: flex;
     flex-direction: row;
     padding-top: 3.5em;
@@ -377,6 +376,34 @@ iframe {
 .id-autores {
     width: 45%;
     padding: 1em;
+}
+
+.author-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-box:first-of-type {
+    margin-top: -5em;
+}
+
+.author-box a{
+    display: inline;
+}
+
+.author-links {
+    margin-top: 1em;
+}
+
+.author-links a{
+    font-size: 1.5em;
+    opacity: .8;
+}
+
+.author-links a:hover, .author-links a:visited, .author-links a:link {
+    color: var(--main-red)
 }
 
 @media (max-width: 47.5em) {
