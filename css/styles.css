@@ -346,6 +346,25 @@ iframe {
 
 }
 
+/* Estilo página Sobre nós */
+
+.about-us {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding-top: 3.5em;
+}
+
+.id-jaguara {
+    width: 55%;
+    padding: 1em;
+}
+
+.id-autores {
+    width: 45%;
+    padding: 1em;
+}
+
 /* ESTILOS DO FORMULÁRIO*/
 
 .contact-form {
