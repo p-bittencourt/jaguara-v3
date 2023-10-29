@@ -62,21 +62,21 @@ function openModal(produto) {
   var estilo;
   switch (produto) {
     case "produto01":
-      txt1.innerHTML  = "Camiseta compeão do coração";
-      txt2.innerHTML  = "Poliester Poliester";
-      txt3.innerHTML  = "R$81,00";
+      txt1.innerHTML  = "Camiseta Listrada";
+      txt2.innerHTML  = "100% Poliéster";
+      txt3.innerHTML  = "R$79,90";
       estilo = "28%"
       break;
     case "produto02":
-      txt1.innerHTML  = "JAQUETA";
-      txt2.innerHTML  = "COURO FODÃO ";
-      txt3.innerHTML  = "R$82,00";
+      txt1.innerHTML  = "Jaqueta";
+      txt2.innerHTML  = "Corta-Vento ";
+      txt3.innerHTML  = "R$119,90";
       estilo = "48%"
       break;
     case "produto03":
-      txt1.innerHTML  = "CANECA";
-      txt2.innerHTML  = "Plástico atóxico";
-      txt3.innerHTML  = "R$83,00";
+      txt1.innerHTML  = "Copo Americano";
+      txt2.innerHTML  = "Vidro";
+      txt3.innerHTML  = "R$9,90";
       estilo = "68%"
       break;
          /* .. continuar igual para as 6 imagens */
