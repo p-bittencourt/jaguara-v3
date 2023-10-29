@@ -129,17 +129,24 @@ function fecharDialog() {
 function verificaAceite() {
     var url = window.location.href;
     return (url.indexOf("?")?true:false);
-  }
+}
 
 function concedeDesconto() {
     if (verificaAceite()) {
-        var valorElement = document.getElementById("valor");
-        var valorTexto = valorElement.textContent;
-        
-        var valorNumerico = parseFloat(valorTexto.replace("R$ ", "").replace(",", "."));
-        var novoValor = valorNumerico - (0.1 * valorNumerico);
-
-        valorElement.textContent = "R$ " + novoValor.toFixed(2); // Arredonda para 2 casas decimais
+        var valorElements = document.getElementsByClassName("valor");
+        var valoresTexto = [];
+        var valoresNumericos = [];
+        var novosValores =[];
+        for (let i = 0; i < valorElements.length; i = i + 1){
+          valoresTexto[i] = valorElements[i].textContent;
+          valoresNumericos[i] = parseFloat(valoresTexto[i].replace("R$ ","").replace(",","."));
+          novosValores[i] = (valoresNumericos[i] - (0.1 * valoresNumericos[i])).toFixed(2);
+          valorElements[i].textContent = "R$ " + novosValores[i];
+        }
+        var promo = document.getElementsByClassName("item");
+        for (let i = 0; i < promo.length; i = i + 1){
+          promo[i].innerHTML = promo[i].innerHTML + '<div class="sell">PROMOÇÃO</div>';
+        }
     }
 }
 
