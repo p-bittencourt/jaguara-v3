@@ -96,8 +96,8 @@ function closeModal() {
 /* FUNÇÕES REFERENTES AO POP-UP  */
 document.addEventListener("DOMContentLoaded", function()
 {
-  abrirDialog();
-  if (window.location.href.endsWith('/produtos.html?aceito=true') || (window.location.href.endsWith('/produtos.html')) || (window.location.href.endsWith('?aceito=true')))
+  if (window.location.href.includes('formAction.html')){ abrirDialog() }
+  if (window.location.href.includes('produtos.html?aceito=true'))
   {
     concedeDesconto();
   }
@@ -137,11 +137,15 @@ function concedeDesconto() {
         var valorTexto = valorElement.textContent;
         
         var valorNumerico = parseFloat(valorTexto.replace("R$ ", "").replace(",", "."));
-        console.log(valorNumerico)
         var novoValor = valorNumerico - (0.1 * valorNumerico);
 
         valorElement.textContent = "R$ " + novoValor.toFixed(2); // Arredonda para 2 casas decimais
     }
 }
 
+/* REDIRECIONA PARA A PAGINA INICIAL OU SOBRE NÓS */
+function redireciona(tela){
+  var URL = tela + ".html";
+  window.location.href = URL;
+} 
 
