@@ -664,7 +664,7 @@ table.tableCSS th {
     max-width: 200px;
     background-color: rgb(252, 244, 220);
     border-radius: 10px;
-    padding: 5px 5px;
+    padding: 1em;
     box-shadow: 0 25px 25px rgb(0 0 0 / 30%);
 }
 
@@ -677,9 +677,9 @@ table.tableCSS th {
 
 .modal .infoH {
     color: rgb(189, 103, 69);
-    font-size: medium;
+    font-size: large;
     text-transform: uppercase;
-    padding-left: 10px;
+    padding: 0.8em;
     text-align: center;
 }
 
@@ -693,7 +693,7 @@ table.tableCSS th {
     border-radius: 10px;
     padding: 7px 7px;
     box-shadow: 0 25px 25px rgb(0 0 0 / 30%);
-    cursor: pointer
+    cursor: pointer;
 }
 
 .topright {
@@ -701,8 +701,9 @@ table.tableCSS th {
     right: 5px;
     border-radius: 4px;
     padding: 2px;
+    margin-top: 4px;
     top: 0;
-    background-color: crimson;
+    background-color: var(--main-red);
     color: #fff;
     cursor: pointer
 }
