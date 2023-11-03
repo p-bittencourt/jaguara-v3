@@ -445,9 +445,14 @@ iframe {
     text-align: left;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
 .form-submit {
-    display: inline-block;
-    background: rgb(81, 92, 104);
+    background: var(--main-red);
     color: #fff;
     border-bottom: none;
     width: auto;
@@ -461,7 +466,8 @@ iframe {
     margin-left: 25px;
     margin-right: 25px;
     margin-left: 15px;
-    cursor: pointer
+    cursor: pointer;
+    align-self: center;
 }
 .form-submit:hover {
     background: rgb(129, 145, 161);
@@ -521,10 +527,11 @@ p {
 /*ESTILO DA TABELA DE LEITURA DO FORMS */
 
 table.tableCSS {
-    background-color: var(--main-brown);
+    background-color: rgba(222, 184, 135, 0.75);
     text-align: left;
-    padding: 10px;
+    padding: 1em;
     width: 650px;
+    margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
     font-size: medium;
@@ -533,8 +540,9 @@ table.tableCSS {
 table.tableCSS td {
     border: 5px;
     border-radius: 10px;
-    padding: 10px;
+    padding: 0.8em;
     border: 1px solid #dbdbdb;
+    margin-bottom: 0.2em;
 }
 table.tableCSS th {
     background-color: #eaedf1;
