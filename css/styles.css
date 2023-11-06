@@ -351,7 +351,6 @@ iframe {
 /* Estilo página Sobre nós */
 
 .about-us {
-    min-height: 100vh;
     display: flex;
     flex-direction: row;
     padding-top: 3.5em;
@@ -379,6 +378,34 @@ iframe {
     padding: 1em;
 }
 
+.author-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-box:first-of-type {
+    margin-top: -5em;
+}
+
+.author-box a{
+    display: inline;
+}
+
+.author-links {
+    margin-top: 1em;
+}
+
+.author-links a{
+    font-size: 1.5em;
+    opacity: .8;
+}
+
+.author-links a:hover, .author-links a:visited, .author-links a:link {
+    color: var(--main-red)
+}
+
 @media (max-width: 47.5em) {
     .about-us {
         flex-direction: column;
@@ -397,13 +424,35 @@ iframe {
 
 /* ESTILOS DO FORMULÁRIO*/
 
+.form-page {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15em;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario h3 {
+    margin-bottom: 2em;
+}
+
 .contact-form {
     text-align: left;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
 .form-submit {
-    display: inline-block;
-    background: rgb(81, 92, 104);
+    background: var(--main-red);
     color: #fff;
     border-bottom: none;
     width: auto;
@@ -417,7 +466,8 @@ iframe {
     margin-left: 25px;
     margin-right: 25px;
     margin-left: 15px;
-    cursor: pointer
+    cursor: pointer;
+    align-self: center;
 }
 .form-submit:hover {
     background: rgb(129, 145, 161);
@@ -477,10 +527,11 @@ p {
 /*ESTILO DA TABELA DE LEITURA DO FORMS */
 
 table.tableCSS {
-    background-color: #c6a152a8;
+    background-color: rgba(222, 184, 135, 0.75);
     text-align: left;
-    padding: 10px;
+    padding: 1em;
     width: 650px;
+    margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
     font-size: medium;
@@ -489,8 +540,9 @@ table.tableCSS {
 table.tableCSS td {
     border: 5px;
     border-radius: 10px;
-    padding: 10px;
+    padding: 0.8em;
     border: 1px solid #dbdbdb;
+    margin-bottom: 0.2em;
 }
 table.tableCSS th {
     background-color: #eaedf1;
@@ -498,6 +550,12 @@ table.tableCSS th {
     height: 30px;
     color: rgb(97, 112, 128);
     text-align: center;
+}
+
+.titleTop {
+    color: var(--main-red);
+    text-align: center;
+    font-size: 3em;
 }
 
 /*ESTILO DOS PRODUTOS */
@@ -606,7 +664,7 @@ table.tableCSS th {
     max-width: 200px;
     background-color: rgb(252, 244, 220);
     border-radius: 10px;
-    padding: 5px 5px;
+    padding: 1em;
     box-shadow: 0 25px 25px rgb(0 0 0 / 30%);
 }
 
@@ -619,9 +677,9 @@ table.tableCSS th {
 
 .modal .infoH {
     color: rgb(189, 103, 69);
-    font-size: medium;
+    font-size: large;
     text-transform: uppercase;
-    padding-left: 10px;
+    padding: 0.8em;
     text-align: center;
 }
 
@@ -635,7 +693,7 @@ table.tableCSS th {
     border-radius: 10px;
     padding: 7px 7px;
     box-shadow: 0 25px 25px rgb(0 0 0 / 30%);
-    cursor: pointer
+    cursor: pointer;
 }
 
 .topright {
@@ -643,8 +701,9 @@ table.tableCSS th {
     right: 5px;
     border-radius: 4px;
     padding: 2px;
+    margin-top: 4px;
     top: 0;
-    background-color: crimson;
+    background-color: var(--main-red);
     color: #fff;
     cursor: pointer
 }
