@@ -48,6 +48,8 @@ dialog::backdrop {
     border: none;
     border-radius: .5rem;
     box-shadow: 0 0 1em (0 0 0 / .3);
+    display: flex;
+    flex-direction: column;
 }
 
 .pop-up button {
@@ -62,11 +64,9 @@ dialog::backdrop {
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
     -ms-border-radius: 5px;
-    margin-top: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-left: 15px;
-    cursor: pointer
+    margin: 0.8em auto;
+    cursor: pointer;
+    width: 45%;
 }
 
 /* Estabelecendo os break points para mudança de tela. */
