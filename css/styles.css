@@ -35,7 +35,7 @@ main {
 }
 
 dialog::backdrop {
-    background-color: black (0 0 0 / .3);
+    background-color: rgba(0, 0, 0, .3);
 }
 
 .pop-up {
@@ -47,15 +47,13 @@ dialog::backdrop {
     transform: translate(-50%, -50%);
     border: none;
     border-radius: .5rem;
-    box-shadow: 0 0 1em (0 0 0 / .3);
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 0 1em rgba(0, 0, 0, .3);
 }
 
 .pop-up button {
     border: none;
     display: inline-block;
-    background: rgb(81, 92, 104);
+    background: var(--main-red);
     color: #fff;
     border-bottom: none;
     padding: 10px 20px;
@@ -64,9 +62,15 @@ dialog::backdrop {
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
     -ms-border-radius: 5px;
-    margin: 0.8em auto;
     cursor: pointer;
-    width: 45%;
+    width: 25%;
+    margin: 1em 0;
+}
+
+.pop-up-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 /* Estabelecendo os break points para mudança de tela. */
@@ -371,6 +375,8 @@ iframe {
 .id-jaguara {
     width: 55%;
     padding: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 .id-autores {
@@ -404,6 +410,12 @@ iframe {
 
 .author-links a:hover, .author-links a:visited, .author-links a:link {
     color: var(--main-red)
+}
+
+.escudo {
+    border-radius: 50%;
+    margin: 3em auto;
+    width: 30%;
 }
 
 @media (max-width: 47.5em) {
@@ -665,7 +677,7 @@ table.tableCSS th {
     background-color: rgb(252, 244, 220);
     border-radius: 10px;
     padding: 1em;
-    box-shadow: 0 25px 25px rgb(0 0 0 / 30%);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, .3);
 }
 
 .modal .info {
@@ -692,7 +704,7 @@ table.tableCSS th {
     border: none;
     border-radius: 10px;
     padding: 7px 7px;
-    box-shadow: 0 25px 25px rgb(0 0 0 / 30%);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, .3);
     cursor: pointer;
 }
 
